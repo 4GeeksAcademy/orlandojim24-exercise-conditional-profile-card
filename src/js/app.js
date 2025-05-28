@@ -42,8 +42,7 @@ function render(variables = {}) {
            ${variables.country === null ? "No Country" : variables.country} 
           ${variables.city === null ? "No City" : variables.city}
           </h3>
-          <ul class=class="${variables.socialMediaPosition ||
-            "position-right"}">
+          <ul class="${variables.socialMediaPosition}">
           <li>
             ${
               variables.twitter
@@ -119,3 +118,4 @@ window.onload = function() {
     });
   });
 };
+
