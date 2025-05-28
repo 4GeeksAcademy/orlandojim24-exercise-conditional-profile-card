@@ -33,29 +33,31 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name === null ? "No name" : variables.name}
-              ${variables.lastName === null ? " " : variables.lastName}</h1>
-          </h1>
-          <h2> ${variables.role === null ? "No role " : variables.role}</h2>
+          <h1>
+           ${variables.name === null ? "Lucy" : variables.name} 
+           ${variables.lastName === null ? "Boilett" : variables.lastName}
+           </h1>
+          <h2>${variables.role === null ? "No Role" : variables.role}</h2>
           <h3>
-          ${variables.city === null ? " No city/country" : variables.city}
-          ${variables.country === null ? " " : variables.country}
+           ${variables.country === null ? "No Country" : variables.country} 
+          ${variables.city === null ? "No City" : variables.city}
           </h3>
-          <ul class="${variables.socialMediaPosition || "position-right"}">
-            <li>
+          <ul class=class="${variables.socialMediaPosition ||
+            "position-right"}">
+          <li>
             ${
               variables.twitter
                 ? `<a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a>`
                 : `<a href="https://twitter.com/4geeksacademy"><i class="fa-brands fa-twitter"></i></a>`
             }
-            <li>
+          <li>
             ${
               variables.github
                 ? `<a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a>`
                 : `<a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a>`
             }
-            </li>
-            <li>
+          </li>
+          <li>
             ${
               variables.linkedin
                 ? `<a href="https://linkedin.com/${variables.linkedin}"><i class="fab fa-linkedin"></i></a>`
@@ -69,7 +71,7 @@ function render(variables = {}) {
                 : `<a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a>`
             }
             </li>
-            </ul>
+          </ul>
         </div>
     `;
 }
